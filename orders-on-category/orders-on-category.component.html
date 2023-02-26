@@ -1,0 +1,29 @@
+<table>
+    <tr>
+        <td>
+<select #categoryName>
+    <option> plant </option>
+    <option> planter </option>
+    <option> seed </option>
+</select>
+
+<button class="btn btn-info" (click)="getOrders(categoryName.value)">Load Orders</button></td>
+<td></td>
+<td>
+<input type="number"   #customerId >
+<button class="btn btn-info" (click)="getOrdersByCustomerId(customerId.value)">View Orders placed</button></td>
+</tr>
+</table>
+
+
+<div *ngFor="let p of allOrders">
+    <div> <i>Order Id :- </i>{{p.bookingOrderId}}</div>
+    <div> <i>Order Date :- </i>{{p.orderDate}}</div>
+    <div> <i>Total Amount :- </i>{{p.totalCost}}</div>
+    <div> <i>Customer Id :- </i>{{p.customerId}}</div>
+    <div> <i>Product Id :- </i>{{p.productId}}</div>
+    <div> <i>Category :- </i>{{p.category}}</div>
+    <div><i>Transaction Mode :- </i>{{p.transactionMode}}</div>
+    <div><i>Quantity :- </i>{{p.quantity}}</div><br/>
+    <hr/>
+</div>

@@ -1,0 +1,25 @@
+
+<table>
+    
+        <tr *ngFor="let p of allPlanters">
+            <div><img src="/assets/images/planter.jpg" alt="Product image" width="200px" height="250px" >></div>
+            <div> {{p.planterId}}</div>
+            <div> <i style="color: rgb(67, 121, 67);">planter cost:- </i><b>{{p.planterCost}}</b> </div>
+            <div> <i style="color: rgb(67, 121, 67);">Stock Available:- </i>{{p.planterStock}}</div>
+            <div><i style="color: rgb(67, 121, 67);">Shape:- </i>{{p.planterShape}}</div>
+            <div><i style="color: rgb(67, 121, 67);">Height:- </i>{{p.planterHeight}}</div>
+            <div><i style="color: rgb(67, 121, 67);">Name:- </i><b>{{p.plantName}}</b></div>
+            <div><i style="color: rgb(67, 121, 67);">Holes:- </i>{{p.drinageHoles}}</div>
+            <div><i style="color: rgb(67, 121, 67);">Capacity:- </i>{{p.planterCapacity}}</div><br />
+            <table>
+                <tr>
+            <td><button value="view" class="btn btn-success" (click)="viewProductDetails(p.planterId,p.plantName,p.planterShape,p.planterHeight,p.planterCost)"> View Details</button></td>
+            <td><button class="btn btn-success" value="Add Order" (click)="placeOrder(p.planterId,p.plantName,p.category,p.planterCost)"> Place Order </button></td>
+            </tr>
+            </table>
+            <hr>
+        
+
+        </tr>
+        
+</table>

@@ -1,0 +1,29 @@
+
+<div class="card text-center col-md-4 offset-md-4" style="background-color: rgba(61, 208, 225, 0.267);">
+    <form (ngSubmit)="onSubmit()">
+        <label>Enter First Name</label>
+        <input type="text"/><br>
+        <label>Enter Last Name</label>
+        <input type="text"/><br>
+                <br>
+                <label>Enter Password</label>
+                <input type="text" id="password" name="password"/><br/>
+
+                <label>Phone Number</label>
+                <input type="number"/>
+                <label>Category</label>
+        <b> 
+            <select #category>
+                <option> Male </option>
+                <option> Female </option>
+            </select>
+        </b>
+        <label>Enter mail</label>
+                <input type="email" id="email" name="email"/><br/>
+                
+                <div class="card-footer text-muted">
+                    <button class="btn btn-primary" type="submit">Register</button>
+                </div>
+
+                
+        
